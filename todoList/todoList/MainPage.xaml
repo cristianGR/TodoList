@@ -8,12 +8,12 @@
 
     <StackLayout Padding="20">
         <StackLayout Orientation="Horizontal">
-            <Entry Placeholder="Ingrese una tarea" HorizontalOptions="FillAndExpand"/>
-            <Button Text="Agregar"/>
+            <Entry Placeholder="Ingrese una tarea" HorizontalOptions="FillAndExpand" x:Name="TskEntry"/>
+            <Button Text="Agregar" Clicked="OnBtnCliked"/>
         </StackLayout>
         <ListView 
             ItemsSource="{Binding Tasks}">
-            <ListView.ItemTemplate>
+            <ListView.ItemTemplate >
                 <DataTemplate>
                     <TextCell/>
                 </DataTemplate>

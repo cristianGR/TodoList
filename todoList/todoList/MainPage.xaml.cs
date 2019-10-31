@@ -17,7 +17,12 @@ namespace todoList
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = new DataStore();
+            DataStore tskList = new DataStore();
+            BindingContext = tskList;
+        }
+
+        public void OnBtnClicked(object sender, EventArgs args){
+            tskList.Add(TskEntry.Text);
         }
     }
 }
